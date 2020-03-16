@@ -39,9 +39,9 @@ ip link set can0 type can bitrate 1000000
 ip link set up can0
 ```
 
-You may want to install can-utils using opk:
+You may want to install can-utils using opkg:
 - run ```opkg update```
 - run ```opkg install can-utils```
 
 Future work:
-```ninetcfgutil``` is used for configuring network adapters on NI systems instead of putting stuff in ```/etc/network/``` - We have no clue how it works at the moment and NI doesn't have it very well documented from what we can find.  This should hopefully aid with setup.
+- ```ninetcfgutil``` is used for configuring network adapters on NI systems instead of putting stuff in ```/etc/network/``` - We have no clue how it works at the moment and NI doesn't have it very well documented from what we can find.  This should hopefully aid with setup.
