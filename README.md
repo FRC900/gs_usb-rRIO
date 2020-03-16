@@ -2,9 +2,9 @@
 Adding more CAN busses to the roboRIO with gs_usb devices (CANable/CANtact/CANwork/Etc).  This is based on work mostly done with our other roboRIO module project: https://github.com/FRC900/rtc-bq32k-rRIO
 
 Sample Devices:
-https://canable.io
-https://wiki.linklayer.com/index.php/CANtact
-http://www.revrobotics.com/rev-11-2158/
+- https://canable.io
+- https://wiki.linklayer.com/index.php/CANtact
+- http://www.revrobotics.com/rev-11-2158/
 
 Next, we pulled the kernel driver from the NI git repo here:  
 https://raw.githubusercontent.com/ni/linux/nilrt/19.1/4.14/drivers/net/can/usb/gs_usb.c
