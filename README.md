@@ -45,3 +45,4 @@ You may want to install can-utils using opkg:
 
 Future work:
 - ```ninetcfgutil``` is used for configuring network adapters on NI systems instead of putting stuff in ```/etc/network/``` - We have no clue how it works at the moment and NI doesn't have it very well documented from what we can find.  This should hopefully aid with setup.
+- Update: ```ninetcfgutil``` seemed to be mostly useless for this: https://forums.ni.com/t5/NI-Linux-Real-Time-Discussions/ninetcfgutil-documentation/td-p/4035192?profile.language=en
