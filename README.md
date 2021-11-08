@@ -47,6 +47,9 @@ Sometimes it is necessary to remap a particular USB device so that the kernel mo
 ```
 ACTION=="add", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="a30e", RUN+="/sbin/modprobe gs_usb" RUN+="/bin/sh -c 'echo 0483 a30e ff > /sys/bus/usb/drivers/gs_usb/new_id'"
 ```
+```
+ACTION==“add”, ATTRS{idVendor}==“XXXX", ATTRS{idProduct}==“YYYY”, RUN+=“/sbin/modprobe gs_usb” RUN+=“/bin/sh -c ‘echo XXXX YYYY ff > /sys/bus/usb/drivers/gs_usb/new_id’”
+```
 
 Future work:
 - ```ninetcfgutil``` is used for configuring network adapters on NI systems instead of putting stuff in ```/etc/network/``` - We have no clue how it works at the moment and NI doesn't have it very well documented from what we can find.  This should hopefully aid with setup.
