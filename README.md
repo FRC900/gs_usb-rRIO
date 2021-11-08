@@ -43,6 +43,11 @@ You may want to install can-utils using opkg:
 - run ```opkg update```
 - run ```opkg install can-utils```
 
+Sometimes it is necessary to remap a particular USB device so that the kernel module can find and use it and, conveinently, UDEV has a method for doing that but please note that you are using this at your own risk:
+```
+ACTION=="add", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="a30e", RUN+="/sbin/modprobe gs_usb" RUN+="/bin/sh -c 'echo 0483 a30e ff > /sys/bus/usb/drivers/gs_usb/new_id'"
+```
+
 Future work:
 - ```ninetcfgutil``` is used for configuring network adapters on NI systems instead of putting stuff in ```/etc/network/``` - We have no clue how it works at the moment and NI doesn't have it very well documented from what we can find.  This should hopefully aid with setup.
 - Update: ```ninetcfgutil``` seemed to be mostly useless for this: https://forums.ni.com/t5/NI-Linux-Real-Time-Discussions/ninetcfgutil-documentation/td-p/4035192?profile.language=en
